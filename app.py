@@ -33,7 +33,7 @@ prompt = ChatPromptTemplate.from_template(template)
 llm = ChatOpenAI(
     model="gpt-4o",
     temperature=0.7,
-    api_key=os.getenv("OPENAI_API_KEY")
+    api_key=st.secrets["OPENAI_AI_KEY"]
 )
 
 chain = prompt | llm | StrOutputParser()
