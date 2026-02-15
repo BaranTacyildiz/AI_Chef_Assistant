@@ -42,7 +42,7 @@ try:
     llm = ChatOpenAI(
         model="gpt-4o",
         temperature=0.7,
-        openai_api_key=api_key  # Changed from api_key to openai_api_key
+        api_key=api_key  # Changed from api_key to openai_api_key
     )
     
     chain = prompt | llm | StrOutputParser()
